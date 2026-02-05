@@ -15,10 +15,19 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
+        // REQUIRED HATAYA HAI: Taaki Google login wale users bina password ke save ho sakein
         minlength: 6
+    },
+    // GOOGLE DATA: Ye do fields add karna zaroori hai
+    googleId: {
+        type: String,
+        default: null
+    },
+    profilePic: {
+        type: String,
+        default: ""
     }
-}, { timestamps: true }); // Isse createdAt aur updatedAt fields apne aap ban jayengi
+}, { timestamps: true }); 
 
 const User = mongoose.model('User', userSchema);
 

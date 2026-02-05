@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import API from "../config/api"; // Axios instance use kiya
 
 const Register = () => {
   const [formData, setFormData] = useState({ fullname: "", email: "", password: "" });
@@ -8,22 +9,14 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:4500/api/auth/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        alert("Account ban gaya! Ab login karein.");
-        navigate("/login");
-      } else {
-        alert(data.message || "Registration fail ho gaya");
-      }
+      // API call using the centralized config
+      const response = await API.post("/auth/register", formData);
+      
+      alert("Account ban gaya! Ab login karein. 🎉");
+      navigate("/login");
     } catch (error) {
-      alert("Backend server se connection nahi ho pa raha!");
+      // Backend error message handle karna
+      alert(error.response?.data?.message || "Registration fail ho gaya.");
     }
   };
 
