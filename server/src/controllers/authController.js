@@ -16,6 +16,7 @@ export const register = async (req, res) => {
     }
 };
 
+
 export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -33,6 +34,7 @@ export const login = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+
 export const googleLogin = async (req, res) => {
     try {
         const { fullname, email, googleId, profilePic } = req.body;
