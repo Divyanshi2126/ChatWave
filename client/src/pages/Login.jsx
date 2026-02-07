@@ -7,7 +7,6 @@ const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
-  // Manual Login Logic
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -42,7 +41,6 @@ const Login = () => {
             <button type="submit" className="btn btn-primary w-full">Login</button>
           </form>
 
-          {/* Divider and Google Button */}
           <div className="divider text-xs text-base-content/50 uppercase">OR</div>
           
           {/* Ye wahi component hai jo humne banaya hai */}
