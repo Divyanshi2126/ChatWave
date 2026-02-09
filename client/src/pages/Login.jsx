@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import API from "../config/api"; 
-import GoogleAuth from "../config/GoogleAuth"; // Button component
+import GoogleAuth from "../config/GoogleAuth"; 
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });

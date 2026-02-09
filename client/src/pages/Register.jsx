@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import API from "../config/api"; // Axios instance use kiya
+import API from "../config/api"; 
 
 const Register = () => {
   const [formData, setFormData] = useState({ fullname: "", email: "", password: "" });
