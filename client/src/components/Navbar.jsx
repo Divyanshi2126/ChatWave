@@ -20,20 +20,37 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 border-b border-base-200 px-4 md:px-10 h-16 sticky top-0 z-50 shadow-sm">
       <div className="flex-1">
-        <Link to="/" className="text-2xl font-black tracking-tighter text-primary">
+        <Link
+          to="/"
+          className="text-2xl font-black tracking-tighter text-primary"
+        >
           Chat<span className="opacity-70">Wave</span>
         </Link>
       </div>
 
       <div className="flex-1 hidden md:flex justify-center gap-2">
-        <Link to="/" className="btn btn-ghost btn-sm normal-case font-medium">Home</Link>
-        <button className="btn btn-ghost btn-sm normal-case font-medium cursor-default">About</button>
+        <Link to="/" className="btn btn-ghost btn-sm normal-case font-medium">
+          Home
+        </Link>
+        <Link
+          to="/about"
+          className="btn btn-ghost btn-sm normal-case font-medium"
+        >
+          About
+        </Link>
       </div>
 
       <div className="flex-1 flex justify-end items-center gap-4">
         <div className="flex items-center gap-2">
-          <Link to="/login" className="btn btn-ghost btn-sm normal-case">Login</Link>
-          <Link to="/register" className="btn btn-primary btn-sm normal-case px-6 shadow-md">Register</Link>
+          <Link to="/login" className="btn btn-ghost btn-sm normal-case">
+            Login
+          </Link>
+          <Link
+            to="/register"
+            className="btn btn-primary btn-sm normal-case px-6 shadow-md"
+          >
+            Register
+          </Link>
         </div>
 
         <div className="divider divider-horizontal mx-0 h-8 opacity-20"></div>
