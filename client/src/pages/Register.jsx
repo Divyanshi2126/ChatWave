@@ -9,7 +9,6 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      // API call using the centralized config
       const response = await API.post("/auth/register", formData);
       
       alert("Account ban gaya! Ab login karein. 🎉");
