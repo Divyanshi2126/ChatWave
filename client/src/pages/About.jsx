@@ -8,7 +8,7 @@ const About = () => {
     <>
       {/* HERO SECTION */}
       <section className="min-h-screen bg-base-100 px-6 py-20 flex items-center">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
           {/* TEXT */}
           <div>
